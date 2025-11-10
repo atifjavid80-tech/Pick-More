@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PICK MORE Restaurant - مزیدار کھانوں کا انتخاب</title>
+    <title>PICK MORE - Burger Zone & Perfect Taste</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
         }
         
         body {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             color: #333;
             line-height: 1.6;
         }
@@ -26,9 +26,10 @@
         
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, #d4a574 0%, #b8860b 100%);
-            color: white;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            margin-bottom: 25px;
         }
         
         .navbar {
@@ -39,13 +40,22 @@
         }
         
         .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: #8B4513;
+            text-align: center;
         }
         
-        .logo span {
-            color: #FFD700;
+        .logo-main {
+            font-size: 42px;
+            font-weight: bold;
+            color: #ff6b35;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .logo-tagline {
+            font-size: 18px;
+            color: #f7931e;
+            font-weight: 600;
+            margin-top: 5px;
         }
         
         .nav-links {
@@ -56,94 +66,93 @@
         
         .nav-links a {
             text-decoration: none;
-            color: white;
+            color: #333;
             font-weight: 600;
             font-size: 18px;
             transition: color 0.3s;
+            padding: 8px 15px;
+            border-radius: 25px;
         }
         
         .nav-links a:hover {
-            color: #FFD700;
+            color: #ff6b35;
+            background: rgba(255,107,53,0.1);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 100px 40px;
-            border-radius: 10px;
+            padding: 80px 40px;
+            border-radius: 20px;
             margin: 20px 0;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            color: #ff6b35;
         }
         
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: #8B4513;
-            padding: 15px 35px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 18px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
             transition: transform 0.3s;
             border: none;
             cursor: pointer;
+            margin: 10px;
         }
         
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255,107,53,0.4);
         }
         
-        /* Menu Section */
+        /* Menu Sections */
         .menu {
             margin: 50px 0;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 40px;
-            color: #8B4513;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            margin: 10px auto;
-            border-radius: 2px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .menu-category {
-            margin-bottom: 50px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .category-title {
-            font-size: 2rem;
-            color: #8B4513;
-            margin-bottom: 25px;
+            font-size: 2.2rem;
+            color: #ff6b35;
+            margin-bottom: 30px;
             text-align: center;
-            border-bottom: 2px solid #d4a574;
-            padding-bottom: 10px;
+            border-bottom: 3px solid #f7931e;
+            padding-bottom: 15px;
         }
         
         .menu-grid {
@@ -153,16 +162,17 @@
         }
         
         .menu-item {
-            background: white;
+            background: #f8f9fa;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s;
-            border-left: 5px solid #FFD700;
+            border-left: 5px solid #ff6b35;
+            position: relative;
         }
         
         .menu-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
         
         .item-header {
@@ -173,92 +183,132 @@
         }
         
         .item-name {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #8B4513;
+            color: #333;
         }
         
         .item-price {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             font-weight: bold;
-            color: #d4a574;
+            color: #ff6b35;
         }
         
         .item-description {
             color: #666;
             margin-bottom: 15px;
+            font-size: 1rem;
         }
         
         .item-tag {
             display: inline-block;
-            background: #8B4513;
+            background: #ff6b35;
             color: white;
-            padding: 5px 12px;
+            padding: 6px 15px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             margin-right: 8px;
+            font-weight: 500;
         }
         
-        /* Special Offers */
-        .offers {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+        /* Special Platter */
+        .platter-special {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             color: white;
-            padding: 50px 40px;
-            border-radius: 15px;
+            border-radius: 20px;
+            padding: 40px;
             margin: 40px 0;
             text-align: center;
+            box-shadow: 0 15px 35px rgba(255,107,53,0.3);
         }
         
-        .offer-title {
+        .platter-title {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #FFD700;
+            color: white;
         }
         
-        .offer-text {
-            font-size: 1.2rem;
+        .platter-description {
+            font-size: 1.3rem;
             margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        /* Deals Section */
+        .deals {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .deal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .deal-item {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 3px dashed #ff6b35;
+        }
+        
+        .deal-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 15px 0;
+        }
+        
+        .deal-description {
+            color: #666;
+            margin-bottom: 15px;
         }
         
         /* Contact Section */
         .contact {
             background: white;
-            border-radius: 15px;
-            padding: 40px;
+            border-radius: 20px;
+            padding: 50px 40px;
             margin: 40px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .contact-info {
-            text-align: center;
+            margin: 25px 0;
         }
         
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #8B4513;
+        .phone-numbers {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 20px 0;
         }
         
-        .contact-info h3 {
-            color: #8B4513;
-            margin-bottom: 10px;
+        .delivery-text {
+            font-size: 1.5rem;
+            color: #f7931e;
+            font-weight: bold;
+            margin: 20px 0;
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
         }
         
         /* Footer */
         footer {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            background: linear-gradient(135deg, #333 0%, #555 100%);
             color: white;
             text-align: center;
             padding: 40px 20px;
             margin-top: 50px;
-            border-radius: 10px 10px 0 0;
+            border-radius: 20px 20px 0 0;
         }
         
         .social-links {
@@ -271,33 +321,19 @@
         .social-links a {
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
-            background: rgba(255,255,255,0.2);
+            padding: 12px 30px;
+            background: rgba(255,107,53,0.9);
             border-radius: 25px;
             transition: background 0.3s;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .social-links a:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255,107,53,1);
         }
         
         .opening-hours {
             margin: 25px 0;
-        }
-        
-        .hours-table {
-            margin: 15px auto;
-            max-width: 400px;
-        }
-        
-        .hours-table tr {
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .hours-table td {
-            padding: 8px 15px;
-            text-align: left;
         }
         
         /* Responsive Design */
@@ -314,15 +350,23 @@
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
             .section-title {
                 font-size: 2.2rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-numbers {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -332,12 +376,16 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <div class="logo">PICK <span>MORE</span></div>
+                <div class="logo">
+                    <div class="logo-main">PICK MORE</div>
+                    <div class="logo-tagline">PERFECT TASTE</div>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#home">ہوم</a></li>
-                    <li><a href="#menu">مینو</a></li>
-                    <li><a href="#about">ہمارے بارے میں</a></li>
-                    <li><a href="#contact">رابطہ</a></li>
+                    <li><a href="#burgers">برگر</a></li>
+                    <li><a href="#rolls">رولز</a></li>
+                    <li><a href="#deals">ڈیلز</a></li>
+                    <li><a href="#contact">آرڈر کریں</a></li>
                 </ul>
             </nav>
         </div>
@@ -346,148 +394,220 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>PICK MORE Restaurant</h1>
-            <p>ذائقوں کا بہترین انتخاب، معیاری پکوان، یادگار تجربہ</p>
-            <a href="#menu" class="btn">مینو دیکھیں</a>
-            <a href="#contact" class="btn" style="margin-left: 15px;">آرڈر کریں</a>
+            <h1>BURGER ZONE</h1>
+            <p>پرفیکٹ ٹیسٹ کا بہترین انتخاب</p>
+            <a href="#contact" class="btn">آرڈر کریں</a>
+            <a href="#deals" class="btn">ڈیلز دیکھیں</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section class="menu" id="menu">
+    <!-- Burger Zone Section -->
+    <section class="menu" id="burgers">
         <div class="container">
-            <h2 class="section-title">ہمارا مینو</h2>
+            <h2 class="section-title">برگر زون</h2>
             
-            <!-- Starters -->
             <div class="menu-category">
-                <h3 class="category-title">اشتہا انگیز</h3>
                 <div class="menu-grid">
+                    <!-- Burgers -->
                     <div class="menu-item">
                         <div class="item-header">
-                            <h4 class="item-name">چکن ٹکّا</h4>
+                            <h4 class="item-name">گرلڈ برگر</h4>
+                            <span class="item-price">روپے 380</span>
+                        </div>
+                        <p class="item-description">تازہ گرلڈ چکن برگر</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">زنجر برگر</h4>
                             <span class="item-price">روپے 450</span>
                         </div>
-                        <p class="item-description">مصالحہ دار چکن کے ٹکڑے، تندور میں تیار</p>
-                        <span class="item-tag">بیسٹ سیلر</span>
+                        <p class="item-description">کرستے زنجر برگر</p>
                     </div>
                     
                     <div class="menu-item">
                         <div class="item-header">
-                            <h4 class="item-name">سبزی پکوڑے</h4>
-                            <span class="item-price">روپے 300</span>
-                        </div>
-                        <p class="item-description">تازہ سبزیوں کے کرستے پکوڑے</p>
-                        <span class="item-tag">وگیٹیرین</span>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4 class="item-name">فش فرائی</h4>
-                            <span class="item-price">روپے 500</span>
-                        </div>
-                        <p class="item-description">تازہ مچھلی کے کرستے ٹکڑے</p>
-                        <span class="item-tag">نئی ڈش</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Main Course -->
-            <div class="menu-category">
-                <h3 class="category-title">مرغی کے پکوان</h3>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4 class="item-name">چکن کریمی</h4>
+                            <h4 class="item-name">پیزا برگر</h4>
                             <span class="item-price">روپے 650</span>
                         </div>
-                        <p class="item-description">ملائی اور مصالحوں میں تیار کردہ</p>
-                        <span class="item-tag">سپیشل</span>
+                        <p class="item-description">پیزا ساس کے ساتھ</p>
                     </div>
                     
                     <div class="menu-item">
                         <div class="item-header">
-                            <h4 class="item-name">چکن بریانی</h4>
-                            <span class="item-price">روپے 550</span>
+                            <h4 class="item-name">ٹاور برگر</h4>
+                            <span class="item-price">روپے 500</span>
                         </div>
-                        <p class="item-description">خوشبودار چاولوں کے ساتھ</p>
-                        <span class="item-tag">مشہور</span>
+                        <p class="item-description">ڈبل پیٹی کے ساتھ</p>
                     </div>
                     
                     <div class="menu-item">
                         <div class="item-header">
-                            <h4 class="item-name">چکن کڑاہی</h4>
-                            <span class="item-price">روپے 600</span>
+                            <h4 class="item-name">کرسپی پیٹی برگر</h4>
+                            <span class="item-price">روپے 300</span>
                         </div>
-                        <p class="item-description">دیسی مصالحوں میں تیار</p>
-                        <span class="item-tag">مسالہ دار</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Beverages -->
-            <div class="menu-category">
-                <h3 class="category-title">مشروبات</h3>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4 class="item-name">لسی</h4>
-                            <span class="item-price">روپے 120</span>
-                        </div>
-                        <p class="item-description">تازہ دہی سے تیار</p>
+                        <p class="item-description">کرستے پیٹی والا برگر</p>
                     </div>
                     
                     <div class="menu-item">
                         <div class="item-header">
-                            <h4 class="item-name">فریش جوس</h4>
-                            <span class="item-price">روپے 180</span>
+                            <h4 class="item-name">چکن برگر</h4>
+                            <span class="item-price">روپے 250</span>
                         </div>
-                        <p class="item-description">تازہ پھلوں کا رس</p>
+                        <p class="item-description">بنیادی چکن برگر</p>
                     </div>
                     
                     <div class="menu-item">
                         <div class="item-header">
-                            <h4 class="item-name">چائے/کافی</h4>
-                            <span class="item-price">روپے 100</span>
+                            <h4 class="item-name">سپیشل چکن برگر</h4>
+                            <span class="item-price">روپے 300</span>
                         </div>
-                        <p class="item-description">تازہ تیار کردہ</p>
+                        <p class="item-description">خصوصی چکن برگر</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Special Offers -->
-    <section class="offers">
+    <!-- Special Platter -->
+    <section class="platter-special">
         <div class="container">
-            <h2 class="offer-title">خصوصی پیشکشیں</h2>
-            <p class="offer-text">فیملی ڈنر پیک - صرف روپے 2000 میں 4 افراد کے لیے</p>
-            <p class="offer-text">ہفتے کے آخر میں 20% رعایت</p>
+            <h2 class="platter-title">PICK MORE PLATTER</h2>
+            <p class="platter-description">4 پیس بہاری رول، 5 پیس ونگز</p>
+            <p class="platter-description">فرائز اور ڈپ ساس کے ساتھ</p>
             <a href="#contact" class="btn">آرڈر کریں</a>
+        </div>
+    </section>
+
+    <!-- Special Rolls -->
+    <section class="menu" id="rolls">
+        <div class="container">
+            <h2 class="section-title">سپیشل رولز</h2>
+            
+            <div class="menu-category">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">زنجر پراٹھا رول</h4>
+                            <span class="item-price">روپے 450</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">گرلڈ چکن پراٹھا رول</h4>
+                            <span class="item-price">روپے 450</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">بہاری رول</h4>
+                            <span class="item-price">روپے 499</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">چکن کباب رول</h4>
+                            <span class="item-price">روپے 450</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pasta Section -->
+    <section class="menu">
+        <div class="container">
+            <h2 class="section-title">پاستا</h2>
+            
+            <div class="menu-category">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">سپیشل کرانچی پاستا</h4>
+                            <span class="item-price">H 499 / F 799</span>
+                        </div>
+                        <p class="item-description">ہاف / فل سائز</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">کریمی پاستا</h4>
+                            <span class="item-price">H 450 / F 750</span>
+                        </div>
+                        <p class="item-description">ہاف / فل سائز</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Burger Deals -->
+    <section class="deals" id="deals">
+        <div class="container">
+            <h2 class="section-title" style="color: #ff6b35;">برگر ڈیلز</h2>
+            
+            <div class="deal-grid">
+                <!-- Deal 1 -->
+                <div class="deal-item">
+                    <h3>پیزا اسٹیکر</h3>
+                    <div class="deal-price">روپے 799</div>
+                </div>
+                
+                <!-- Deal 2 -->
+                <div class="deal-item">
+                    <h3>PICK MORE سپیشل سینڈوچ</h3>
+                    <div class="deal-price">روپے 699</div>
+                </div>
+                
+                <!-- Deal 3 -->
+                <div class="deal-item">
+                    <h3>1 زنجر برگر + فرائز + ڈرنک</h3>
+                </div>
+                
+                <!-- Deal 4 -->
+                <div class="deal-item">
+                    <h3>2 گرلڈ برگر + فرائز + 0.5 لیٹر ڈرنک</h3>
+                </div>
+                
+                <!-- Deal 5 -->
+                <div class="deal-item">
+                    <h3>1 سپیشل چکن برگر + فرائز + ڈرنک</h3>
+                    <div class="deal-price">روپے 549</div>
+                </div>
+                
+                <!-- Deal 6 -->
+                <div class="deal-item">
+                    <h3>2 سپیشل چکن برگر + فرائز + ڈرنک</h3>
+                    <div class="deal-price">روپے 739</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">رابطہ کریں</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-icon">📞</div>
-                    <h3>فون نمبر</h3>
-                    <p>+92-XXX-XXXXXXX</p>
+            <h2 class="section-title" style="color: #ff6b35;">آرڈر کریں</h2>
+            
+            <div class="contact-info">
+                <div class="phone-numbers">
+                    📞 0336-6902221<br>
+                    📞 0306-6902221
                 </div>
                 
-                <div class="contact-info">
-                    <div class="contact-icon">📍</div>
-                    <h3>پتہ</h3>
-                    <p>PICK MORE Restaurant<br>آپ کا شہر، پاکستان</p>
+                <div class="delivery-text">
+                    🚚 FREE HOME DELIVERY
                 </div>
                 
-                <div class="contact-info">
-                    <div class="contact-icon">⏰</div>
-                    <h3>اوپننگ اوقات</h3>
-                    <p>صبح 11 بجے سے رات 11 بجے تک</p>
-                </div>
+                <p style="font-size: 1.2rem; color: #666; margin: 20px 0;">
+                    24/7 ڈیلیوری سروس
+                </p>
+                
+                <a href="tel:03366902221" class="btn">فون کر کے آرڈر کریں</a>
             </div>
         </div>
     </section>
@@ -495,8 +615,8 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="logo" style="color: #FFD700; font-size: 28px;">PICK <span style="color: white;">MORE</span></div>
-            <p>ذائقوں کا بہترین انتخاب</p>
+            <div class="logo-main" style="color: #ff6b35; font-size: 36px;">PICK MORE</div>
+            <div class="logo-tagline" style="color: #f7931e;">PERFECT TASTE</div>
             
             <div class="social-links">
                 <a href="https://www.facebook.com/profile.php?id=61580628391110">فیس بک</a>
@@ -505,20 +625,11 @@
             </div>
             
             <div class="opening-hours">
-                <h3>کاروباری اوقات</h3>
-                <table class="hours-table">
-                    <tr>
-                        <td>سوموار - جمعہ</td>
-                        <td>11:00 AM - 11:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>ہفتہ - اتوار</td>
-                        <td>11:00 AM - 12:00 AM</td>
-                    </tr>
-                </table>
+                <h3>24/7 ڈیلیوری</h3>
+                <p>صبح 11 بجے سے رات 2 بجے تک</p>
             </div>
             
-            <p>&copy; 2024 PICK MORE Restaurant. تمام حقوق محفوظ ہیں۔</p>
+            <p>&copy; 2024 PICK MORE - Burger Zone. تمام حقوق محفوظ ہیں۔</p>
         </div>
     </footer>
 </body>
