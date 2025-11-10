@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PICK MORE - Burger Zone & Perfect Taste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -175,6 +176,14 @@
             transform: translateY(-8px);
         }
         
+        .item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
         .item-header {
             display: flex;
             justify-content: space-between;
@@ -255,6 +264,19 @@
             padding: 30px;
             text-align: center;
             border: 3px dashed #ff6b35;
+            transition: transform 0.3s;
+        }
+        
+        .deal-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .deal-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
         
         .deal-price {
@@ -326,6 +348,9 @@
             border-radius: 25px;
             transition: background 0.3s;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .social-links a:hover {
@@ -368,6 +393,11 @@
             .phone-numbers {
                 font-size: 1.4rem;
             }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -381,11 +411,11 @@
                     <div class="logo-tagline">PERFECT TASTE</div>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home">ہوم</a></li>
-                    <li><a href="#burgers">برگر</a></li>
-                    <li><a href="#rolls">رولز</a></li>
-                    <li><a href="#deals">ڈیلز</a></li>
-                    <li><a href="#contact">آرڈر کریں</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#burgers">Burgers</a></li>
+                    <li><a href="#rolls">Rolls</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#contact">Order Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -395,74 +425,81 @@
     <section class="hero" id="home">
         <div class="container">
             <h1>BURGER ZONE</h1>
-            <p>پرفیکٹ ٹیسٹ کا بہترین انتخاب</p>
-            <a href="#contact" class="btn">آرڈر کریں</a>
-            <a href="#deals" class="btn">ڈیلز دیکھیں</a>
+            <p>Perfect Taste's Best Selection</p>
+            <a href="#contact" class="btn">Order Now</a>
+            <a href="#deals" class="btn">View Deals</a>
         </div>
     </section>
 
     <!-- Burger Zone Section -->
     <section class="menu" id="burgers">
         <div class="container">
-            <h2 class="section-title">برگر زون</h2>
+            <h2 class="section-title">Burger Zone</h2>
             
             <div class="menu-category">
                 <div class="menu-grid">
                     <!-- Burgers -->
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80" alt="Grilled Burger" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">گرلڈ برگر</h4>
-                            <span class="item-price">روپے 380</span>
+                            <h4 class="item-name">Grilled Burger</h4>
+                            <span class="item-price">Rs. 380</span>
                         </div>
-                        <p class="item-description">تازہ گرلڈ چکن برگر</p>
+                        <p class="item-description">Fresh grilled chicken burger with special sauce</p>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Zinger Burger" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">زنجر برگر</h4>
-                            <span class="item-price">روپے 450</span>
+                            <h4 class="item-name">Zinger Burger</h4>
+                            <span class="item-price">Rs. 450</span>
                         </div>
-                        <p class="item-description">کرستے زنجر برگر</p>
+                        <p class="item-description">Crispy zinger burger with fresh vegetables</p>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e5882ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Pizza Burger" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">پیزا برگر</h4>
-                            <span class="item-price">روپے 650</span>
+                            <h4 class="item-name">Pizza Burger</h4>
+                            <span class="item-price">Rs. 650</span>
                         </div>
-                        <p class="item-description">پیزا ساس کے ساتھ</p>
+                        <p class="item-description">Unique combination of pizza and burger</p>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1068&q=80" alt="Tower Burger" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">ٹاور برگر</h4>
-                            <span class="item-price">روپے 500</span>
+                            <h4 class="item-name">Tower Burger</h4>
+                            <span class="item-price">Rs. 500</span>
                         </div>
-                        <p class="item-description">ڈبل پیٹی کے ساتھ</p>
+                        <p class="item-description">Double patty tower burger with special sauce</p>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1551615593-ef5fe247e8f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Crispy Patty Burger" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">کرسپی پیٹی برگر</h4>
-                            <span class="item-price">روپے 300</span>
+                            <h4 class="item-name">Crispy Patty Burger</h4>
+                            <span class="item-price">Rs. 300</span>
                         </div>
-                        <p class="item-description">کرستے پیٹی والا برگر</p>
+                        <p class="item-description">Crispy patty burger with fresh vegetables</p>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Chicken Burger" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">چکن برگر</h4>
-                            <span class="item-price">روپے 250</span>
+                            <h4 class="item-name">Chicken Burger</h4>
+                            <span class="item-price">Rs. 250</span>
                         </div>
-                        <p class="item-description">بنیادی چکن برگر</p>
+                        <p class="item-description">Classic chicken burger with fresh ingredients</p>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Special Chicken Burger" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">سپیشل چکن برگر</h4>
-                            <span class="item-price">روپے 300</span>
+                            <h4 class="item-name">Special Chicken Burger</h4>
+                            <span class="item-price">Rs. 300</span>
                         </div>
-                        <p class="item-description">خصوصی چکن برگر</p>
+                        <p class="item-description">Special chicken burger with our secret recipe</p>
                     </div>
                 </div>
             </div>
@@ -473,44 +510,48 @@
     <section class="platter-special">
         <div class="container">
             <h2 class="platter-title">PICK MORE PLATTER</h2>
-            <p class="platter-description">4 پیس بہاری رول، 5 پیس ونگز</p>
-            <p class="platter-description">فرائز اور ڈپ ساس کے ساتھ</p>
-            <a href="#contact" class="btn">آرڈر کریں</a>
+            <p class="platter-description">4 Pcs Behari Roll, 5 Pcs Wings</p>
+            <p class="platter-description">Served with Fries & Dip Sauce</p>
+            <a href="#contact" class="btn">Order Now</a>
         </div>
     </section>
 
     <!-- Special Rolls -->
     <section class="menu" id="rolls">
         <div class="container">
-            <h2 class="section-title">سپیشل رولز</h2>
+            <h2 class="section-title">Special Rolls</h2>
             
             <div class="menu-category">
                 <div class="menu-grid">
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1643106274027-8c321c3c91e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Zinger Paratha Roll" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">زنجر پراٹھا رول</h4>
-                            <span class="item-price">روپے 450</span>
+                            <h4 class="item-name">Zinger Paratha Roll</h4>
+                            <span class="item-price">Rs. 450</span>
                         </div>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1643106274027-8c321c3c91e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Grilled Chicken Paratha Roll" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">گرلڈ چکن پراٹھا رول</h4>
-                            <span class="item-price">روپے 450</span>
+                            <h4 class="item-name">Grilled Chicken Paratha Roll</h4>
+                            <span class="item-price">Rs. 450</span>
                         </div>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1643106274027-8c321c3c91e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Behari Roll" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">بہاری رول</h4>
-                            <span class="item-price">روپے 499</span>
+                            <h4 class="item-name">Behari Roll</h4>
+                            <span class="item-price">Rs. 499</span>
                         </div>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1643106274027-8c321c3c91e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Chicken Kabab Roll" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">چکن کباب رول</h4>
-                            <span class="item-price">روپے 450</span>
+                            <h4 class="item-name">Chicken Kabab Roll</h4>
+                            <span class="item-price">Rs. 450</span>
                         </div>
                     </div>
                 </div>
@@ -521,24 +562,26 @@
     <!-- Pasta Section -->
     <section class="menu">
         <div class="container">
-            <h2 class="section-title">پاستا</h2>
+            <h2 class="section-title">Pasta</h2>
             
             <div class="menu-category">
                 <div class="menu-grid">
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="Special Crunchy Pasta" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">سپیشل کرانچی پاستا</h4>
+                            <h4 class="item-name">Special Crunchy Pasta</h4>
                             <span class="item-price">H 499 / F 799</span>
                         </div>
-                        <p class="item-description">ہاف / فل سائز</p>
+                        <p class="item-description">Half / Full Size</p>
                     </div>
                     
                     <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1598866594230-a7c12756260f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80" alt="Creamy Pasta" class="item-image">
                         <div class="item-header">
-                            <h4 class="item-name">کریمی پاستا</h4>
+                            <h4 class="item-name">Creamy Pasta</h4>
                             <span class="item-price">H 450 / F 750</span>
                         </div>
-                        <p class="item-description">ہاف / فل سائز</p>
+                        <p class="item-description">Half / Full Size</p>
                     </div>
                 </div>
             </div>
@@ -548,41 +591,47 @@
     <!-- Burger Deals -->
     <section class="deals" id="deals">
         <div class="container">
-            <h2 class="section-title" style="color: #ff6b35;">برگر ڈیلز</h2>
+            <h2 class="section-title" style="color: #ff6b35;">Burger Deals</h2>
             
             <div class="deal-grid">
                 <!-- Deal 1 -->
                 <div class="deal-item">
-                    <h3>پیزا اسٹیکر</h3>
-                    <div class="deal-price">روپے 799</div>
+                    <img src="https://images.unsplash.com/photo-1548340747-4762f30658c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Pizza Stacker" class="deal-image">
+                    <h3>Pizza Stacker</h3>
+                    <div class="deal-price">Rs. 799</div>
                 </div>
                 
                 <!-- Deal 2 -->
                 <div class="deal-item">
-                    <h3>PICK MORE سپیشل سینڈوچ</h3>
-                    <div class="deal-price">روپے 699</div>
+                    <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" alt="Pick More Special Sandwich" class="deal-image">
+                    <h3>PICK MORE Special Sandwich</h3>
+                    <div class="deal-price">Rs. 699</div>
                 </div>
                 
                 <!-- Deal 3 -->
                 <div class="deal-item">
-                    <h3>1 زنجر برگر + فرائز + ڈرنک</h3>
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="1 Zinger Burger Deal" class="deal-image">
+                    <h3>1 Zinger Burger + Fries + Drink</h3>
                 </div>
                 
                 <!-- Deal 4 -->
                 <div class="deal-item">
-                    <h3>2 گرلڈ برگر + فرائز + 0.5 لیٹر ڈرنک</h3>
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="2 Grilled Burger Deal" class="deal-image">
+                    <h3>2 Grilled Burger + Fries + 0.5 Ltr Drink</h3>
                 </div>
                 
                 <!-- Deal 5 -->
                 <div class="deal-item">
-                    <h3>1 سپیشل چکن برگر + فرائز + ڈرنک</h3>
-                    <div class="deal-price">روپے 549</div>
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="1 Special Chicken Burger Deal" class="deal-image">
+                    <h3>1 Special Chicken Burger + Fries + Drink</h3>
+                    <div class="deal-price">Rs. 549</div>
                 </div>
                 
                 <!-- Deal 6 -->
                 <div class="deal-item">
-                    <h3>2 سپیشل چکن برگر + فرائز + ڈرنک</h3>
-                    <div class="deal-price">روپے 739</div>
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="2 Special Chicken Burger Deal" class="deal-image">
+                    <h3>2 Special Chicken Burger + Fries + Drink</h3>
+                    <div class="deal-price">Rs. 739</div>
                 </div>
             </div>
         </div>
@@ -591,23 +640,24 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title" style="color: #ff6b35;">آرڈر کریں</h2>
+            <h2 class="section-title" style="color: #ff6b35;">Order Now</h2>
             
             <div class="contact-info">
                 <div class="phone-numbers">
-                    📞 0336-6902221<br>
-                    📞 0306-6902221
+                    <i class="fas fa-phone"></i> 0336-6902221<br>
+                    <i class="fas fa-phone"></i> 0306-6902221
                 </div>
                 
                 <div class="delivery-text">
-                    🚚 FREE HOME DELIVERY
+                    <i class="fas fa-truck"></i> FREE HOME DELIVERY
                 </div>
                 
                 <p style="font-size: 1.2rem; color: #666; margin: 20px 0;">
-                    24/7 ڈیلیوری سروس
+                    24/7 Delivery Service
                 </p>
                 
-                <a href="tel:03366902221" class="btn">فون کر کے آرڈر کریں</a>
+                <a href="tel:03366902221" class="btn"><i class="fas fa-phone"></i> Call to Order</a>
+                <a href="https://wa.me/923366902221" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
             </div>
         </div>
     </section>
@@ -619,17 +669,17 @@
             <div class="logo-tagline" style="color: #f7931e;">PERFECT TASTE</div>
             
             <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=61580628391110">فیس بک</a>
-                <a href="#">انسٹاگرام</a>
-                <a href="#">واٹس ایپ</a>
+                <a href="https://www.facebook.com/profile.php?id=61580628391110"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
             
             <div class="opening-hours">
-                <h3>24/7 ڈیلیوری</h3>
-                <p>صبح 11 بجے سے رات 2 بجے تک</p>
+                <h3>24/7 Delivery</h3>
+                <p>11:00 AM to 2:00 AM</p>
             </div>
             
-            <p>&copy; 2024 PICK MORE - Burger Zone. تمام حقوق محفوظ ہیں۔</p>
+            <p>&copy; 2024 PICK MORE - Burger Zone. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
